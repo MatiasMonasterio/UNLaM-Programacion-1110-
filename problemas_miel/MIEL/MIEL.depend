@@ -1,0 +1,9 @@
+# depslib dependency file v1.0
+1600127827 source:d:\matías monasterio\documents\unlam\progarmacion 1\contenido practico\problemas_miel\miel\main.c
+	<stdio.h>
+	<stdlib.h>
+
+1600130382 source:d:\matías monasterio\documents\unlam\progarmacion 1\contenido practico\problemas_miel\miel\funciones.c
+	<stdio.h>
+	<string.h>
+

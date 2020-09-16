@@ -1,0 +1,36 @@
+# depslib dependency file v1.0
+1599966723 source:d:\matías monasterio\documents\unlam\progarmacion 1\proyectos\test\main.c
+	<stdio.h>
+	<stdlib.h>
+	<stdbool.h>
+	"Funciones.h"
+
+1599779870 d:\matías monasterio\documents\unlam\progarmacion 1\proyectos\test\funciones.h
+	<stdbool.h>
+
+1599966810 source:d:\matías monasterio\documents\unlam\progarmacion 1\proyectos\test\funciones.c
+	"Funciones.h"
+	"math.h"
+	<stdio.h>
+	<stdbool.h>
+
+1600227072 source:d:\matías monasterio\documents\unlam\progarmacion 1\contenido practico\practico_01\funciones.c
+	"Funciones.h"
+	"math.h"
+	<stdio.h>
+	<stdbool.h>
+	"Typedef.h"
+
+1600227066 d:\matías monasterio\documents\unlam\progarmacion 1\contenido practico\practico_01\funciones.h
+	"Typedef.h"
+	<stdbool.h>
+
+1600227066 source:d:\matías monasterio\documents\unlam\progarmacion 1\contenido practico\practico_01\main.c
+	<stdio.h>
+	<stdlib.h>
+	<stdbool.h>
+	"Funciones.h"
+	"Typedef.h"
+
+1599971688 d:\matías monasterio\documents\unlam\progarmacion 1\contenido practico\practico_01\typedef.h
+
