@@ -239,6 +239,7 @@ int parteEntera( float *numero ){
 /*====================================================================================================================================================*/
 
 // EJERCICIO 22
+/* Se puede optimizar mas, todavía no lo pense mucho */
 void insertarElemento( int *vector, int elemento, unsigned int posicion ){
     int aux1, aux2;
 
@@ -259,3 +260,102 @@ void insertarElemento( int *vector, int elemento, unsigned int posicion ){
     }while( *(vector-1) );
 }
 
+/*====================================================================================================================================================*/
+/*====================================================================================================================================================*/
+
+// EJERCICIO 23
+void insertarElementoOrdenado( int *vector, int elemento ){
+    int aux1, aux2;
+
+    while( *vector ){
+
+        if( *vector > elemento && !aux1 ){
+            aux1 = *vector;
+            *vector = elemento;
+        }
+        else if( aux1 ){
+            aux2 = *vector;
+            *vector = aux1;
+            aux1 = aux2;
+        }
+
+        vector++;
+    }
+
+    *vector = aux1;
+    *(vector + 1) = 0;
+}
+
+/*====================================================================================================================================================*/
+/*====================================================================================================================================================*/
+
+// EJERCICIO 24
+void elimitarPosicion( int *vec, unsigned int posicion ){
+    int iteracion = 1;
+
+    while( *vec ){
+        if( posicion <= iteracion ){ *vec = *(vec+1); }
+
+        iteracion++;
+        vec++;
+    }
+}
+
+/*====================================================================================================================================================*/
+/*====================================================================================================================================================*/
+
+// EJERCICIO 25
+void eliminarElementoUnico( int *vec, int elemento ){
+    int flag = 0;
+
+    while( *vec ){
+        if( *vec == elemento || flag ){
+            *vec = *(vec+1);
+            flag = 1;
+        }
+
+        vec++;
+    }
+}
+
+/*====================================================================================================================================================*/
+/*====================================================================================================================================================*/
+
+// EJERCICIO 26
+void eliminarElementoRepetido( int *vec, int elemento ){
+    int index = 1;
+    int organizar = 0;
+
+    while( *vec && *(vec + index) ){
+
+        if( organizar ){
+            *vec = *(vec + index );
+        }
+
+        if( *vec == elemento ){
+
+            while( *vec == elemento ){
+            *vec = *(vec + index );
+            printf("Valor vector: %i\n", *vec );
+            index++;
+            organizar = 1;
+            }
+
+            index--;
+        }
+
+        vec++;
+    }
+
+    *vec = 0;
+}
+
+/*====================================================================================================================================================*/
+/*====================================================================================================================================================*/
+
+void devolverValorNumericoASCII( char *vec ){
+    /*
+    Problema de interpretacion, si uso punteros el vector originalmente es un char por lo que solo puedo asignarle valores char
+     En el caso que quier devolver el numero en char necesito dos varibles  porque solo tengo del 0 al 9 y los char de letras tiene dos digitos
+    */
+}

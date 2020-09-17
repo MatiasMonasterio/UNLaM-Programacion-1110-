@@ -9,7 +9,11 @@ int main()
     //testingEj16();
     //testingEj17();
     //testingEj21();
-    testingEj22();
+    //testingEj22();
+    //testingEj23();
+    //testingEj24();
+    //testingEj25();
+    testingEj26();
 
     return 0;
 }
@@ -21,6 +25,9 @@ int main()
     03 - ¿Si hay codigo que se repite varias veces y no se optimiza ya te bocha?
     04 - ¿Como enviar un puntero a una funcion? Creo que es con el **nombreVariable, pero como hago la referencia del struct para el dato?
     05 - Ejercicio 22, asigne el valor por base y desplazamiento. La catedra dice que no podemos usarlo. Consultar si es un caso excepcional
+    06 - Como recorrer un arreglo como puntero en el main, osea sin enviarlo a una funcion. ( No me deja usar el puntero++ )
+    07 - Datos explicitos como posicion o elemento de un arreglo tambien hay que mandarlos como puntero o hardcodiado y dejando que ocupe un espacio en memoria dentro de la funcion no hay problema
+
 */
 
 
@@ -98,4 +105,59 @@ void testingEj22(){
     printf("Valor1: %i\n", vect[5]);
     printf("Valor1: %i\n", vect[6]);
     printf("Valor1: %i\n", vect[7]);
+}
+
+void testingEj23(){
+
+    int vec01[] = { 2, 5, 8, 9, 15, 0 };
+    insertarElementoOrdenado( vec01, 11 );
+
+    printf("Valor: %i\n", vec01[0] );
+    printf("Valor: %i\n", vec01[1] );
+    printf("Valor: %i\n", vec01[2] );
+    printf("Valor: %i\n", vec01[3] );
+    printf("Valor: %i\n", vec01[4] );
+    printf("Valor: %i\n", vec01[5] );
+    printf("Valor: %i\n", vec01[6] );
+}
+
+
+void testingEj24(){
+    int vec01[] = { 2, 5, 0 };
+    elimitarPosicion( vec01, 1 );
+
+    printf("Valor: %i\n", vec01[0] );
+    printf("Valor: %i\n", vec01[1] );
+    printf("Valor: %i\n", vec01[2] );
+    printf("Valor: %i\n", vec01[3] );
+    printf("Valor: %i\n", vec01[4] );
+    printf("Valor: %i\n", vec01[5] );
+    printf("Valor: %i\n", vec01[6] );
+}
+
+void testingEj25(){
+    int vec01[] = { 2, 2, 2, 2, 10, 0 };
+    eliminarElementoUnico( vec01, 2 );
+
+    printf("Valor: %i\n", vec01[0] );
+    printf("Valor: %i\n", vec01[1] );
+    printf("Valor: %i\n", vec01[2] );
+    printf("Valor: %i\n", vec01[3] );
+    printf("Valor: %i\n", vec01[4] );
+    printf("Valor: %i\n", vec01[5] );
+    printf("Valor: %i\n", vec01[6] );
+}
+
+void testingEj26(){
+    // QUE PASA SI TODOS LOS NUMEROS SON EL ELEMENTO A BORRAR
+    int vec01[] = { 2, 2, 2, 5, 2, 10, 12, 2, 2, 2, 8, 0 };
+    eliminarElementoRepetido( vec01, 2 );
+
+    printf("Valor: %i\n", vec01[0] );
+    printf("Valor: %i\n", vec01[1] );
+    printf("Valor: %i\n", vec01[2] );
+    printf("Valor: %i\n", vec01[3] );
+    printf("Valor: %i\n", vec01[4] );
+    printf("Valor: %i\n", vec01[5] );
+    printf("Valor: %i\n", vec01[6] );
 }
